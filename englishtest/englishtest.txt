@@ -1,0 +1,178 @@
+科技英语综合教程课后答案及课文翻译
+Unit 1
+Translation Practice
+II. Words and Phrases Translation
+A. Translate the following expressions intoChinese:
+
+1. mutual gain game and mutual harm game 互赢博弈和互败博弈
+2. sequential-move game 连续策略博弈
+3. simultaneous-move game 联立策略博弈
+4. linear reasoning 直线推理
+5. circular reasoning 循环推理
+6. Nash equilibrium 纳什均衡
+7. dominant strategy 支配性策略
+8. optimal result 最优化结果
+9. breakdown of cooperation 合作分裂
+10. strategy of brinkmanship 边缘化策略
+    B. Translate the following expressions intoEnglish:
+11. 完全博弈 pure conflict
+12. 竞争与合作 competition and cooperation
+13. 策略性相互作用 strategic interdependence
+14. 囚徒困境 prisoners’ dilemma
+15. 长远性损失 long-run loss
+16. 针锋相对策略 tit-for-tat strategy
+17. 混合性策略 mixing one’s moves
+18. (网球)斜线球或底线球 hit passing shot cross-court or down the line
+19. 垄断性市场 monopoly market
+20. 均衡份额 equilibrium shares
+
+Unit 2
+Translation Practice
+II. Words and Phrases Translation
+A. Translate the following expressions intoChinese:
+
+1. magnetic resonance imaging 磁共振成像
+2. hydrogen proton氢质子
+3. magnetic property磁性
+4. nanocrystal纳米晶体
+5. contrast agent造影剂，对比剂
+6. quantum dot量子点
+7. cadmium selenide硒化镉
+8. carbon nanotube纳米碳管
+9. epithelial cell上皮细胞
+10. near-infrared laser 近红外线激光
+    B. Translate the following expressions intoEnglish:
+11. 死亡率death rate/mortality
+12. 氧化铁iron oxide
+13. 细胞膜membrane
+14. 机械效应mechanical effect
+15. 副作用side effect
+16. 抗体antibody
+17. 放射疗法radiation therapy
+18. 细胞系a cell line
+19. 晚期肿瘤advanced tumor
+20. 生物制剂biological agent
+Unit 3
+Translation Practice
+II. Words and Phrases Translation
+A. Translate the following expressions intoChinese:
+
+1. spinal cord injury脊髓损伤
+2. an exclusive license专用许可证
+3. natural healing自然愈合
+4. central nervous system中枢神经系统
+5. feeder cells供养细胞，滋养细胞
+6. foreign 异质的
+7. cultured cells （人工）培养的细胞
+8. a nude mouse裸鼠
+9. sensitivity刺激感
+   B. Translate the following expressions intoEnglish:
+10. 胚胎干细胞embryonic stem cells
+11. 细胞疗法cell therapy
+12. 细胞群cell population
+13. 临床试验clinical trial
+14. 分化 (n.) differentiation
+15. 良性肿瘤a benign tumor
+16. 糖分子sugar molecule
+17. 免疫系统immune system
+18. 突变 (n.) mutation
+Unit 4
+Translation Practice
+II. Words andPhrases Translation:
+A.Translate the following expressions into Chinese:
+
+1. PCMM 分组电缆多媒体
+2. Qos  服务质量
+3. CMTS电缆调制解调器系统
+4. OEM 原始设备制造商
+   5.Meshed Wireless Networking网状无线网络
+   6.VoIP 基于互联网协议的语音传输
+   7.Hosted VoIP 托管语音IP
+   8.VPN虚拟专用网
+   9.PON 无源光网
+   10.OLT光线路终端
+   B.Translate the following expressions into English:
+   1.视频点播VoD ( video on demand)
+   2.按需分配带宽bandwidth-on-demand
+   3.无缝移动技术seamlessmobility
+   4.实时视频会议 real-timevideoconference
+   5.双频双模dual-band, dualmode
+   6.专用路由dedicated path
+   7.链接选路daisy chainrouting
+   8.时分多路转换TDM (timedivision multiplex)
+   9.光纤到户FTTH (fiber tothe house)
+   10.光纤到驻地FTTP (fiber tothe premise)
+Unit 5
+TranslationPractice
+
+II. Words and Phrases Translation
+A. Translate the following expressions intoChinese：
+
+1. the existing technology 现有的技术
+2. voice commands 语音命令
+3. cellular network蜂窝网络
+4. slot for added memory附加存储卡用槽
+5. have computerlikefeatures具有电脑功能
+6. a built-in digitalcamera 内置式数码相机
+7. set up temporary offices建立临时办公室
+8. word processing power 文字处理能力
+9. qwerty keyboard 标准键盘
+10. location-based services定位服务
+    B. Translatethe following expressions into English：
+11. 闪存容量flashy memory
+12. 手机观察家们mobile-phone watchers
+13. 投影键盘projection keyboard
+14. 个人电脑的捍卫者defenders of the PC
+15. 语音识别系统speech-recognition system
+16. “双铰”式设计“dual hinge” design
+17. 按钮式拨号式键盘the touch-tone pad
+18. 手机迷a phone guy
+19. 豪华大屏显the luxuriously large screen
+20. 智能手机the sophisticated / smart phones
+Unit 6
+II. Words and Phrases Translation
+A. Translate the following expressions intoChinese:
+
+1.      computing architecture 计算机架构
+2.      gate switching energy 门转换能量
+3.      microprocessor 微处理器
+4.      heat dissipation  散热
+5.      adiabatic process 绝热过程
+6.      thermal noise 热噪声
+7.      packet inspection 包检测
+8.      general-purpose application  通用软件
+         B. Translate the following expressions intoEnglish:
+9.      不可逆电路 irreversible circuit
+10.      网络设备 networking equipment
+11.      可逆记忆芯片 reversible memory chip
+12.      病毒检查 virus checking 
+13.      便携式设备 portable device
+14.      底板设计 backplane design
+15.      交换装置 switching device
+16.      路由装置 routing device
+
+Unit 7
+II. Words and Phrases Translation
+A. Translate the following expressions intoChinese:
+
+1.      Wi-Fi (Wireless Fidelity) 无限保真
+2.      PSAP (Public SafetyAnswering Point) 紧急通信受理中心
+3.      ANI (Automatic NumberIdentification) 自动数字识别技术
+4.      ALI (Automatic LocationIdentification)  自动定位识别技术
+5.      cellular network 蜂窝网络
+6.      VLAN （Virtual LocalArea Network） 虚拟局域网
+7.      DSL (Digital Subscriber Line) 数字用户线路
+8.      URIs (Uniform ResourceIdentifiers)  统一资源指示器
+9.      PSTN (Public Switched TelephoneNetwork) 公共电话交换网络
+10.      margin of error 误差幅度
+         B. Translate the following expressions intoEnglish:
+11.      码分多址CDMA(CodeDivision Multiple Access)
+12.      全球定位系统GPS(Global Position System)
+13.      辅助型全球定位系统Assisted-GPS
+14.      基站 base station
+15.      接入点 AP (accesspoint)
+16.      许可波段 licensed bands
+17.      多径传播 multipathpropagation
+18.      虚拟专网 VPN (VirtuePrivate Network)
+19.      射频指纹识别技术RF fingerprinting
+20.      漫游功能roaming capability

@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>科技英语综合教程 - 翻译练习</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#4f46e5;--primary-light:#818cf8;--primary-bg:#eef2ff;--success:#16a34a;--success-bg:#dcfce7;--danger:#dc2626;--danger-bg:#fee2e2;--gray:#64748b;--gray-light:#f1f5f9;--border:#e2e8f0;--radius:12px;--shadow:0 1px 3px rgba(0,0,0,.1)}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.6}
+.container{max-width:900px;margin:0 auto;padding:20px}
+header{text-align:center;padding:30px 0 20px}
+header h1{font-size:1.8rem;color:var(--primary);margin-bottom:6px}
+header p{color:var(--gray);font-size:.95rem}
+nav{display:flex;gap:10px;justify-content:center;margin-bottom:30px;flex-wrap:wrap}
+nav button{padding:10px 24px;border:2px solid var(--border);background:#fff;border-radius:var(--radius);cursor:pointer;font-size:.95rem;font-weight:600;color:var(--gray);transition:.2s}
+nav button:hover{border-color:var(--primary-light);color:var(--primary)}
+nav button.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+.section{display:none}
+.section.active{display:block}
+.card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;margin-bottom:16px}
+.card h2{font-size:1.2rem;color:var(--primary);margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--primary-bg)}
+.unit-select{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.unit-btn{padding:8px 18px;border:2px solid var(--border);background:#fff;border-radius:8px;cursor:pointer;font-size:.9rem;font-weight:500;transition:.2s}
+.unit-btn:hover{border-color:var(--primary-light)}
+.unit-btn.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+table{width:100%;border-collapse:collapse}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--border);font-size:.9rem}
+th{background:var(--primary-bg);color:var(--primary);font-weight:600;position:sticky;top:0}
+tr:hover{background:var(--gray-light)}
+td:first-child{width:40px;color:var(--gray);text-align:center}
+td:nth-child(2){width:45%;font-weight:500}
+td:nth-child(3){width:45%}
+.tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.75rem;font-weight:600;margin-left:6px}
+.tag-en{background:#dbeafe;color:#2563eb}
+.tag-cn{background:#fce7f3;color:#db2777}
+.quiz-setup{margin-bottom:20px}
+.quiz-setup label{display:block;font-weight:600;margin-bottom:8px;color:#374151}
+.quiz-setup select,.quiz-setup input{padding:8px 12px;border:2px solid var(--border);border-radius:8px;font-size:.95rem;width:100%;max-width:300px}
+.quiz-mode-select{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+.quiz-mode-select button{padding:10px 20px;border:2px solid var(--border);background:#fff;border-radius:8px;cursor:pointer;font-weight:500;transition:.2s}
+.quiz-mode-select button:hover{border-color:var(--primary-light)}
+.quiz-mode-select button.active{background:var(--primary-bg);color:var(--primary);border-color:var(--primary)}
+.start-btn{padding:12px 36px;background:var(--primary);color:#fff;border:none;border-radius:var(--radius);font-size:1rem;font-weight:600;cursor:pointer;transition:.2s;margin-top:10px}
+.start-btn:hover{background:#4338ca}
+.quiz-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:30px;text-align:center}
+.quiz-progress{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;color:var(--gray);font-size:.9rem}
+.progress-bar{width:100%;height:6px;background:var(--border);border-radius:3px;margin-bottom:20px;overflow:hidden}
+.progress-fill{height:100%;background:var(--primary);border-radius:3px;transition:width .3s}
+.quiz-question{font-size:1.1rem;font-weight:600;margin:20px 0;min-height:60px;display:flex;align-items:center;justify-content:center}
+.quiz-input{width:100%;max-width:500px;padding:12px 16px;border:2px solid var(--border);border-radius:8px;font-size:1rem;text-align:center;margin:0 auto;display:block;transition:.2s}
+.quiz-input:focus{outline:none;border-color:var(--primary)}
+.quiz-input.correct{border-color:var(--success);background:var(--success-bg)}
+.quiz-input.wrong{border-color:var(--danger);background:var(--danger-bg)}
+.quiz-actions{margin-top:20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{padding:10px 24px;border:none;border-radius:8px;font-size:.95rem;font-weight:600;cursor:pointer;transition:.2s}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:#4338ca}
+.btn-secondary{background:var(--gray-light);color:var(--gray)}
+.btn-secondary:hover{background:#e2e8f0}
+.btn-success{background:var(--success);color:#fff}
+.btn-danger{background:var(--danger);color:#fff}
+.btn-sm{padding:6px 14px;font-size:.85rem}
+.answer-reveal{margin-top:16px;padding:16px;border-radius:8px;font-size:.95rem}
+.answer-reveal.correct{background:var(--success-bg);color:var(--success)}
+.answer-reveal.wrong{background:var(--danger-bg);color:var(--danger)}
+.answer-reveal .answer-label{font-weight:600;margin-bottom:4px}
+.result-card{text-align:center;padding:40px}
+.result-score{font-size:3rem;font-weight:700;color:var(--primary);margin:20px 0}
+.result-detail{color:var(--gray);margin-bottom:24px}
+.hidden{display:none}
+.toggle-answer{padding:8px 16px;border:1px solid var(--border);background:#fff;border-radius:6px;cursor:pointer;font-size:.85rem;color:var(--gray);margin-top:8px;transition:.2s}
+.toggle-answer:hover{border-color:var(--primary);color:var(--primary)}
+@media(max-width:640px){
+  .container{padding:12px}
+  header h1{font-size:1.4rem}
+  th,td{padding:8px 6px;font-size:.82rem}
+  .quiz-question{font-size:1rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>科技英语综合教程</h1>
+    <p>翻译练习 & 刷题系统</p>
+  </header>
+
+  <nav>
+    <button class="active" onclick="switchMode('review')">复习模式</button>
+    <button onclick="switchMode('quiz')">刷题模式</button>
+  </nav>
+
+  <div id="reviewSection" class="section active">
+    <div class="card">
+      <h2>选择单元</h2>
+      <div class="unit-select" id="unitSelect"></div>
+    </div>
+    <div id="reviewContent" style="display:none">
+      <div class="card" id="reviewSectionA">
+        <h2 id="reviewTitleA"></h2>
+        <p style="color:var(--gray);margin-bottom:12px;font-size:.9rem">A. 英译中 — 看英文，说出中文翻译</p>
+        <div style="overflow-x:auto">
+          <table>
+            <thead><tr><th>#</th><th>英文</th><th>中文</th></tr></thead>
+            <tbody id="reviewTableA"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card" id="reviewSectionB">
+        <h2 id="reviewTitleB"></h2>
+        <p style="color:var(--gray);margin-bottom:12px;font-size:.9rem">B. 中译英 — 看中文，说出英文翻译</p>
+        <div style="overflow-x:auto">
+          <table>
+            <thead><tr><th>#</th><th>中文</th><th>英文</th></tr></thead>
+            <tbody id="reviewTableB"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card" id="reviewSectionC">
+        <h2 id="reviewTitleC"></h2>
+        <p style="color:var(--gray);margin-bottom:12px;font-size:.9rem">C. 句子英译中 — 看英文句子，说出中文翻译</p>
+        <div style="overflow-x:auto">
+          <table>
+            <thead><tr><th>#</th><th>英文句子</th><th>中文翻译</th></tr></thead>
+            <tbody id="reviewTableC"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="quizSection" class="section">
+    <div class="card" id="quizSetup">
+      <h2>刷题设置</h2>
+      <div class="quiz-setup">
+        <label>题型</label>
+        <div class="quiz-mode-select" id="quizTypeSelect">
+          <button class="active" data-type="all">全部混合</button>
+          <button data-type="en2cn">A. 英译中</button>
+          <button data-type="cn2en">B. 中译英</button>
+          <button data-type="sentence">C. 句子翻译</button>
+        </div>
+      </div>
+      <div class="quiz-setup">
+        <label>范围</label>
+        <div class="unit-select" id="quizUnitSelect"></div>
+      </div>
+      <div class="quiz-setup">
+        <label>题目数量</label>
+        <select id="quizCount">
+          <option value="10">10 题</option>
+          <option value="20" selected>20 题</option>
+          <option value="50">50 题</option>
+          <option value="0">全部</option>
+        </select>
+      </div>
+      <button class="start-btn" onclick="startQuiz()">开始刷题</button>
+    </div>
+
+    <div class="card hidden" id="quizArea">
+      <div class="quiz-progress">
+        <span id="quizProgressText"></span>
+        <span id="quizScoreText"></span>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="quiz-question" id="quizQuestion"></div>
+      <input class="quiz-input" id="quizInput" placeholder="输入翻译..." autocomplete="off">
+      <textarea class="quiz-input hidden" id="quizTextarea" placeholder="输入翻译..." rows="4" style="resize:vertical;max-width:600px"></textarea>
+      <div class="answer-reveal hidden" id="answerReveal"></div>
+      <div class="quiz-actions" id="quizActions">
+        <button class="btn btn-primary" id="submitBtn" onclick="submitAnswer()">确认</button>
+        <button class="btn btn-secondary hidden" id="nextBtn" onclick="nextQuestion()">下一题</button>
+      </div>
+    </div>
+
+    <div class="card hidden" id="quizResult">
+      <div class="result-card">
+        <h2>练习完成</h2>
+        <div class="result-score" id="resultScore"></div>
+        <div class="result-detail" id="resultDetail"></div>
+        <div id="wrongList" style="text-align:left;margin:20px 0"></div>
+        <button class="btn btn-primary" onclick="restartQuiz()">再来一次</button>
+        <button class="btn btn-secondary" onclick="backToSetup()">返回设置</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const DATA = {
+  1: {
+    title: "Unit 1 - 博弈论",
+    words: [
+      { en: "mutual gain game and mutual harm game", cn: "互赢博弈和互败博弈", type: "en2cn" },
+      { en: "sequential-move game", cn: "连续策略博弈", type: "en2cn" },
+      { en: "simultaneous-move game", cn: "联立策略博弈", type: "en2cn" },
+      { en: "linear reasoning", cn: "直线推理", type: "en2cn" },
+      { en: "circular reasoning", cn: "循环推理", type: "en2cn" },
+      { en: "Nash equilibrium", cn: "纳什均衡", type: "en2cn" },
+      { en: "dominant strategy", cn: "支配性策略", type: "en2cn" },
+      { en: "optimal result", cn: "最优化结果", type: "en2cn" },
+      { en: "breakdown of cooperation", cn: "合作分裂", type: "en2cn" },
+      { en: "strategy of brinkmanship", cn: "边缘化策略", type: "en2cn" },
+      { en: "pure conflict", cn: "完全博弈", type: "cn2en" },
+      { en: "competition and cooperation", cn: "竞争与合作", type: "cn2en" },
+      { en: "strategic interdependence", cn: "策略性相互作用", type: "cn2en" },
+      { en: "prisoners' dilemma", cn: "囚徒困境", type: "cn2en" },
+      { en: "long-run loss", cn: "长远性损失", type: "cn2en" },
+      { en: "tit-for-tat strategy", cn: "针锋相对策略", type: "cn2en" },
+      { en: "mixing one's moves", cn: "混合性策略", type: "cn2en" },
+      { en: "hit a passing shot cross-court or down the line", cn: "(网球)斜线球或底线球", type: "cn2en" },
+      { en: "monopoly market", cn: "垄断性市场", type: "cn2en" },
+      { en: "equilibrium shares", cn: "均衡份额", type: "cn2en" }
+    ],
+    sentences: [
+      { en: "The essence of a game is the interdependence of player strategies. There are two distinct types of strategic interdependence: sequential and simultaneous.", cn: "博弈的实质是博弈者采取策略之间的相互依赖性。这种策略性的相互依赖表现为两个不同的类别：连续策略之间的相互作用以及联立策略之间的相互作用。" },
+      { en: "When we say that an outcome is an equilibrium, there is no presumption that each person's privately best choice will lead to a collectively optimal result.", cn: "当我们把博弈的结果表述为一种均衡的时候，并不是基于以下的假设：即博弈的每个参与者的个人最佳策略将会带来共同的最优化结果。" },
+      { en: "In some situations of conflict, any systematic action will be discovered and exploited by the rival. Therefore, it is important to keep the rival guessing by mixing one's moves.", cn: "在一些博弈的冲突中，任何条理化和计划性的行为都会被对手发现并加以利用。因此，通过采用组合性策略使对手迷惑就显得非常重要。" },
+      { en: "Brinkmanship is the tactic of deliberately letting the situation get somewhat out of hand, just because its being out of hand may be intolerable to the other party and force his accommodation.", cn: "边缘政策是一种故意使局势变得有些无法控制的策略，正是这种无法控制性可能会使另一方无法接受而选择妥协。" },
+      { en: "When one player knows something that others do not, sometimes he is anxious to conceal this information, and at other times he wants to reveal it credibly. In both cases the general principle is that actions speak louder than words.", cn: "当博弈的一方了解其他人所不掌握的信息时，他会急于隐瞒这一信息，在其他一些情况下，他还会想令人信服的公开某些信息。在这两种情况下，行胜于言是博弈者遵循的基本原则。" }
+    ]
+  },
+  2: {
+    title: "Unit 2 - 纳米医学",
+    words: [
+      { en: "magnetic resonance imaging", cn: "磁共振成像", type: "en2cn" },
+      { en: "hydrogen proton", cn: "氢质子", type: "en2cn" },
+      { en: "magnetic property", cn: "磁性", type: "en2cn" },
+      { en: "nanocrystal", cn: "纳米晶体", type: "en2cn" },
+      { en: "contrast agent", cn: "造影剂，对比剂", type: "en2cn" },
+      { en: "quantum dot", cn: "量子点", type: "en2cn" },
+      { en: "cadmium selenide", cn: "硒化镉", type: "en2cn" },
+      { en: "carbon nanotube", cn: "纳米碳管", type: "en2cn" },
+      { en: "epithelial cell", cn: "上皮细胞", type: "en2cn" },
+      { en: "near-infrared laser", cn: "近红外线激光", type: "en2cn" },
+      { en: "death rate / mortality", cn: "死亡率", type: "cn2en" },
+      { en: "iron oxide", cn: "氧化铁", type: "cn2en" },
+      { en: "membrane", cn: "细胞膜", type: "cn2en" },
+      { en: "mechanical effect", cn: "机械效应", type: "cn2en" },
+      { en: "side effect", cn: "副作用", type: "cn2en" },
+      { en: "antibody", cn: "抗体", type: "cn2en" },
+      { en: "radiation therapy", cn: "放射疗法", type: "cn2en" },
+      { en: "a cell line", cn: "细胞系", type: "cn2en" },
+      { en: "advanced tumor", cn: "晚期肿瘤", type: "cn2en" },
+      { en: "biological agent", cn: "生物制剂", type: "cn2en" }
+    ],
+    sentences: [
+      { en: "The devices can be designed to specifically target and enter tumor cells. Once inside, they can deliver any number of payloads, from agents that improve cancer detection to treatments such as drugs or genes.", cn: "这种纳米装置可以设计用来靶向并进入肿瘤细胞。一旦进入，它们就可以携带提高癌症检测的制剂及癌症治疗的药物或基因等许多有效载荷。" },
+      { en: "Adjusting the particles' sizes creates probes that, when stimulated by light, emit distinct amounts of energy, or different colors of light.", cn: "调整颗粒的大小就形成了探针，当光束照射探针时，它就会放射出大量清晰可见的能量，或者是不同颜色的光。" },
+      { en: "The researchers then injected the targeted drug-dendrimer complexes intravenously into mice riddled with human epithelial-cell cancer.", cn: "研究人员接着将靶向药物树枝状聚合物通过静脉注射到移植了人类上皮细胞的小鼠身上。" },
+      { en: "Because flesh is transparent to light in this wavelength range, targeting nanotubes to cancer cells and then hitting them with a near-infrared laser could turn the tubes into weapons that kill the cells with heat.", cn: "由于肌肉在这个波长内具有透光性，将纳米管靶向癌细胞并用近红外线激光照射，就能将纳米管变成用高温杀死癌细胞的武器。" },
+      { en: "Normally, if a healthy cell acquires too many mutations to develop properly, the p53 gene will initiate cellular suicide. If this gene stops working, however, the cell keeps growing and can become malignant.", cn: "正常情况下，如果一个健康的细胞发生了许多突变而不能继续正常生长，p53基因就会诱发细胞自杀。然而，假如这个基因停止作用，细胞就会持续生长，最终可能变为恶性肿瘤细胞。" }
+    ]
+  },
+  3: {
+    title: "Unit 3 - 干细胞",
+    words: [
+      { en: "spinal cord injury", cn: "脊髓损伤", type: "en2cn" },
+      { en: "an exclusive license", cn: "专用许可证", type: "en2cn" },
+      { en: "natural healing", cn: "自然愈合", type: "en2cn" },
+      { en: "central nervous system", cn: "中枢神经系统", type: "en2cn" },
+      { en: "feeder cells", cn: "供养细胞，滋养细胞", type: "en2cn" },
+      { en: "foreign", cn: "异质的", type: "en2cn" },
+      { en: "cultured cells", cn: "(人工)培养的细胞", type: "en2cn" },
+      { en: "a nude mouse", cn: "裸鼠", type: "en2cn" },
+      { en: "sensitivity", cn: "刺激感", type: "en2cn" },
+      { en: "embryonic stem cells", cn: "胚胎干细胞", type: "cn2en" },
+      { en: "cell therapy", cn: "细胞疗法", type: "cn2en" },
+      { en: "cell population", cn: "细胞群", type: "cn2en" },
+      { en: "clinical trial", cn: "临床试验", type: "cn2en" },
+      { en: "differentiation", cn: "分化 (n.)", type: "cn2en" },
+      { en: "a benign tumor", cn: "良性肿瘤", type: "cn2en" },
+      { en: "sugar molecule", cn: "糖分子", type: "cn2en" },
+      { en: "immune system", cn: "免疫系统", type: "cn2en" },
+      { en: "mutation", cn: "突变 (n.)", type: "cn2en" }
+    ],
+    sentences: [
+      { en: "The extreme flexibility and capacity for growth characteristic of ES cells makes them ideal for producing large quantities of therapeutic cells to treat, say, diabetes or spinal cord injuries.", cn: "胚胎干细胞的极强的适应性以及生长能力使它们能够产生大量的治疗细胞去治疗像糖尿病及脊髓损伤一类的疾病。" },
+      { en: "These cells can form oligodendrocytes, the cells that, among other functions, produce the protective myelin sheath that allows neurons to send signals along their axons.", cn: "该细胞可形成少突神经胶质细胞，其功能之一是产生保护性髓磷脂鞘使神经元能够沿着神经轴突传递信号。" },
+      { en: "Perhaps the biggest worry is that hES therapies will spur tumor formation. One of the defining characteristics of ES cells is that they form disorganized tumors, called teratomas, when injected in undifferentiated form under the skin of immune-compromised mice.", cn: "也许对人体胚胎干细胞疗法的最大担心在于它可能诱发肿瘤形成。已明确的是在免疫受损小鼠皮下注射未分化的胚胎细胞时可形成非组织性肿瘤，即畸胎瘤。" },
+      { en: "Cultured cells are often kept alive with fetal calf serum, for instance, and most hES cell lines have been grown on layers of mouse cells called feeder cells, which provide the key proteins that prevent ES cells from differentiating.", cn: "比如，培养的细胞通常在胎牛血清中存活，大多数人体胚胎干细胞生长在滋养层细胞的鼠细胞层上，以提供关键蛋白质防止胚胎细胞分化。" },
+      { en: "Finally, some scientists worry that ES cells might acquire harmful new mutations in culture, and such mutations would be particularly hard to detect ahead of time.", cn: "最后，一些研究者担心在培养中胚胎细胞可能会获得有害的新突变。这种突变事先是难以检测到的。" }
+    ]
+  },
+  4: {
+    title: "Unit 4 - 网络通信",
+    words: [
+      { en: "PCMM (PacketCable Multimedia)", cn: "分组电缆多媒体", type: "en2cn" },
+      { en: "QoS (Quality of Service)", cn: "服务质量", type: "en2cn" },
+      { en: "CMTS (Cable Modem Termination System)", cn: "电缆调制解调器系统", type: "en2cn" },
+      { en: "OEM (Original Equipment Manufacturer)", cn: "原始设备制造商", type: "en2cn" },
+      { en: "Meshed Wireless Networking", cn: "网状无线网络", type: "en2cn" },
+      { en: "VoIP (Voice over Internet Protocol)", cn: "基于互联网协议的语音传输", type: "en2cn" },
+      { en: "Hosted VoIP", cn: "托管语音IP", type: "en2cn" },
+      { en: "VPN (Virtual Private Network)", cn: "虚拟专用网", type: "en2cn" },
+      { en: "PON (Passive Optical Network)", cn: "无源光网", type: "en2cn" },
+      { en: "OLT (Optical Line Terminal)", cn: "光线路终端", type: "en2cn" },
+      { en: "VoD (Video on Demand)", cn: "视频点播", type: "cn2en" },
+      { en: "bandwidth-on-demand", cn: "按需分配带宽", type: "cn2en" },
+      { en: "seamless mobility", cn: "无缝移动技术", type: "cn2en" },
+      { en: "real-time video conference", cn: "实时视频会议", type: "cn2en" },
+      { en: "dual-band, dual mode", cn: "双频双模", type: "cn2en" },
+      { en: "dedicated path", cn: "专用路由", type: "cn2en" },
+      { en: "daisy chain routing", cn: "链接选路", type: "cn2en" },
+      { en: "TDM (Time Division Multiplex)", cn: "时分多路转换", type: "cn2en" },
+      { en: "FTTH (Fiber to the House)", cn: "光纤到户", type: "cn2en" },
+      { en: "FTTP (Fiber to the Premise)", cn: "光纤到驻地", type: "cn2en" }
+    ],
+    sentences: [
+      { en: "By using the PCMM specification, cable operators can enhance a user's broadband experience by prioritizing or reserving bandwidth for latency-sensitive or feature-rich applications.", cn: "通过使用PCMM规范，有线运营商可以对时延敏感或富有特色的应用给予优先权或预留带宽，从而加深用户对于宽带业务的感受。" },
+      { en: "The PCMM architecture consists of six main elements: IP endpoints, cable modem, CMTS, record keeping server, policy server and an application manager.", cn: "PCMM体系结构包括六个主要组成部分：IP端点（PC机、游戏控制器或SIP话机）、电缆调制解调器、电缆调制解调器终端系统（CMTS）、记录保持服务器、策略服务器和应用管理器。" },
+      { en: "The seamless cellular Wi-Fi roaming technology would alert the mobile carrier when a user migrates into a Wi-Fi zone so the signal could be transferred from the cell tower to the Wi-Fi access point.", cn: "当用户从蜂窝网移至WiFi服务区时，无缝蜂窝漫游系统将告知移动运营商，使信号从蜂窝天线塔转移至WiFi接入点，启动手机的宽带功能，同时保持话音通信。" },
+      { en: "The newest technology to enter the wireless networking fray is the concept of meshed networks, which moves away from the hot spot concept toward the metro spot utopia.", cn: "进入无线网络竞争的新技术是网状网，它要把热点的概念变为理想的城点概念。" },
+      { en: "Leveraging the ubiquity of standard Ethernet and IP technologies, an active Ethernet network installs the associated network electronics at the subscriber network edge instead of the CO or head-end.", cn: "有源以太网利用了以太网和IP这两种标准技术无所不在的特点，把相关网络设备安装在用户网络边缘，而不是在中心局或局端。" }
+    ]
+  },
+  5: {
+    title: "Unit 5 - 智能手机",
+    words: [
+      { en: "the existing technology", cn: "现有的技术", type: "en2cn" },
+      { en: "voice commands", cn: "语音命令", type: "en2cn" },
+      { en: "cellular network", cn: "蜂窝网络", type: "en2cn" },
+      { en: "slot for added memory", cn: "附加存储卡用槽", type: "en2cn" },
+      { en: "have computerlike features", cn: "具有电脑功能", type: "en2cn" },
+      { en: "a built-in digital camera", cn: "内置式数码相机", type: "en2cn" },
+      { en: "set up temporary offices", cn: "建立临时办公室", type: "en2cn" },
+      { en: "word processing power", cn: "文字处理能力", type: "en2cn" },
+      { en: "qwerty keyboard", cn: "标准键盘", type: "en2cn" },
+      { en: "location-based services", cn: "定位服务", type: "en2cn" },
+      { en: "flash memory", cn: "闪存容量", type: "cn2en" },
+      { en: "mobile-phone watchers", cn: "手机观察家们", type: "cn2en" },
+      { en: "projection keyboard", cn: "投影键盘", type: "cn2en" },
+      { en: "defenders of the PC", cn: "个人电脑的捍卫者", type: "cn2en" },
+      { en: "speech-recognition system", cn: "语音识别系统", type: "cn2en" },
+      { en: "dual hinge design", cn: '"双铰"式设计', type: "cn2en" },
+      { en: "the touch-tone pad", cn: "按钮式拨号式键盘", type: "cn2en" },
+      { en: "a phone guy", cn: "手机迷", type: "cn2en" },
+      { en: "the luxuriously large screen", cn: "豪华大屏显", type: "cn2en" },
+      { en: "the sophisticated / smart phones", cn: "智能手机", type: "cn2en" }
+    ],
+    sentences: [
+      { en: "As our phones get smarter, smaller and faster and enable users to connect at high speeds to the Internet, an obvious question arises: Is the mobile handset turning into the next computer?", cn: "电话变得越来越智能、小型、快速，并且能够让用户高速地连接到因特网，一个显而易见的问题就出现了：移动手持设备将成为下一代的计算机吗？" },
+      { en: "There are also smartphones on the way with video cameras, GPS antennas and access to local Wi-Fi hotspots, the superfast wireless networks often found in offices, airports and cafes.", cn: "还有一些正在开发中的智能电话，他们将带有摄像机、GPS天线以及本地Wi-Fi热点链接的入口。" },
+      { en: "With this capability, phones will soon be able to provide precise driving directions, serve up discounts for stores as you walk by them and expand dating services.", cn: "有了这项功能，手机很快就能提供诸如精确的行车向导、走过店铺时店铺的打折信息以及开展约会等服务。" },
+      { en: "Cell phones aren't likely to take the fastest road to this bright future. Innovation in the mobile industry is full of zigzags and wrong turns, often because no single company completely controls the device in your pocket.", cn: "手机不太可能沿着最快的道路飞驶向自己光明的未来。这个行业里的创新充满了曲折和失误，这常常是由于没有任何一家单独的公司能完全控制这一产品。" },
+      { en: "Yet mobile-phone innovators are working to solve that tricky problem, too. Scientists are continuing decades of research into speech-recognition systems and have recently introduced the technology into PDAs.", cn: "然而，手机创新者也正着手解决这个棘手的问题。科学家已经在语音识别系统方面进行了数十年的研究，而且此项研究仍在继续。最近已将这项技术引入了PDAs中。" }
+    ]
+  },
+  6: {
+    title: "Unit 6 - 计算架构",
+    words: [
+      { en: "computing architecture", cn: "计算机架构", type: "en2cn" },
+      { en: "gate switching energy", cn: "门转换能量", type: "en2cn" },
+      { en: "microprocessor", cn: "微处理器", type: "en2cn" },
+      { en: "heat dissipation", cn: "散热", type: "en2cn" },
+      { en: "adiabatic process", cn: "绝热过程", type: "en2cn" },
+      { en: "thermal noise", cn: "热噪声", type: "en2cn" },
+      { en: "packet inspection", cn: "包检测", type: "en2cn" },
+      { en: "general-purpose application", cn: "通用软件", type: "en2cn" },
+      { en: "irreversible circuit", cn: "不可逆电路", type: "cn2en" },
+      { en: "networking equipment", cn: "网络设备", type: "cn2en" },
+      { en: "reversible memory chip", cn: "可逆记忆芯片", type: "cn2en" },
+      { en: "virus checking", cn: "病毒检查", type: "cn2en" },
+      { en: "portable device", cn: "便携式设备", type: "cn2en" },
+      { en: "backplane design", cn: "底板设计", type: "cn2en" },
+      { en: "switching device", cn: "交换装置", type: "cn2en" },
+      { en: "routing device", cn: "路由装置", type: "cn2en" }
+    ],
+    sentences: [
+      { en: "Businesses may not put much stock in recycling, but when it comes to computing power, researchers' work in creating the first high-quality reversible computing power supply may be the key to unlocking the power of tomorrow's computing platforms.", cn: "业界可能对回收能量方面没有太大信心，但是谈到计算能力，一位研究人员从事现实环保的研究可能是开发未来计算平台能力的关键。" },
+      { en: "Reversible computers, or adiabatic systems, recycle their energy to give off extremely little heat, enabling computing power to continue growing where existing technology would falter.", cn: "可逆计算机即绝热系统，它能够将能量回收，因此只产生很少的热量，使计算能力在现有计算技术无能为力的情况下继续提升。" },
+      { en: "To stave off these problems, researchers have been investigating alternative computing techniques. Quantum computing has garnered significant publicity.", cn: "为了避免这些问题，研究人员一直在研究可替代的计算方法。其中，量子计算已经引起了广泛的关注。" },
+      { en: "Much of the energy needed to make that change is given off in the form of a spark in the case of static energy, or heat in the case of circuitry.", cn: "发生这一转变所需的能量在静电这种情况下表现为瞬间放电，在电路这种情况下表现为释放热量。" },
+      { en: "The universal chip is estimated to be several thousand times more energy-efficient than comparable irreversible circuits. However, the chips were proof-of-concept designs and haven't yet been optimized. It wouldn't be more efficient for practical applications.", cn: "这种通用芯片能量效率预计比类似的不可逆电路要高几千倍。然而这些芯片的设计目前还停留在概念阶段，尚未被优化。因而在实际应用中不会更高效。" }
+    ]
+  },
+  7: {
+    title: "Unit 7 - 无线定位",
+    words: [
+      { en: "Wi-Fi (Wireless Fidelity)", cn: "无线保真", type: "en2cn" },
+      { en: "PSAP (Public Safety Answering Point)", cn: "紧急通信受理中心", type: "en2cn" },
+      { en: "ANI (Automatic Number Identification)", cn: "自动数字识别技术", type: "en2cn" },
+      { en: "ALI (Automatic Location Identification)", cn: "自动定位识别技术", type: "en2cn" },
+      { en: "cellular network", cn: "蜂窝网络", type: "en2cn" },
+      { en: "VLAN (Virtual Local Area Network)", cn: "虚拟局域网", type: "en2cn" },
+      { en: "DSL (Digital Subscriber Line)", cn: "数字用户线路", type: "en2cn" },
+      { en: "URIs (Uniform Resource Identifiers)", cn: "统一资源指示器", type: "en2cn" },
+      { en: "PSTN (Public Switched Telephone Network)", cn: "公共电话交换网络", type: "en2cn" },
+      { en: "margin of error", cn: "误差幅度", type: "en2cn" },
+      { en: "CDMA (Code Division Multiple Access)", cn: "码分多址", type: "cn2en" },
+      { en: "GPS (Global Position System)", cn: "全球定位系统", type: "cn2en" },
+      { en: "Assisted-GPS", cn: "辅助型全球定位系统", type: "cn2en" },
+      { en: "base station", cn: "基站", type: "cn2en" },
+      { en: "AP (Access Point)", cn: "接入点", type: "cn2en" },
+      { en: "licensed bands", cn: "许可波段", type: "cn2en" },
+      { en: "multipath propagation", cn: "多径传播", type: "cn2en" },
+      { en: "VPN (Virtual Private Network)", cn: "虚拟专网", type: "cn2en" },
+      { en: "RF fingerprinting", cn: "射频指纹识别技术", type: "cn2en" },
+      { en: "roaming capability", cn: "漫游功能", type: "cn2en" }
+    ],
+    sentences: [
+      { en: "As with the public network, understanding an individual or device's physical location will enable a new range of applications that will radically improve existing business processes and information technologies.", cn: "对于公共网而言，了解个人和设备的物理位置会带来一系列新的应用。这些应用将从根本上改进商业流程和信息技术。" },
+      { en: "By contrast, E911 determines caller location through agents that receive Automatic Number Identification (ANI) messages containing the calling phone number as determined by the phone company's switching equipment.", cn: "比较而言，E911系统却可以通过接收了自动数字识别信息的代理来决定主叫方的位置。代理利用了包含由电话公司的交换设备确定的主叫号码的自动数字识别信息，通过一个叫做自动定位识别的过程在数据库中寻找主叫方的位置信息。" },
+      { en: "He points out that the access infrastructure provider, the entity that owns the actual DSL, cable, or Wi-Fi service, can always determine the location of devices on its network.", cn: "他指出接入基础设施提供商，即拥有数字用户线路、电缆和无限保真网服务的实体总能确定设备在网络上的位置。" },
+      { en: "By comparing the signal strength received from multiple APs, triangulation can more precisely locate a user.", cn: "通过比较多个接入点接收到的信号强度，三角测量技术能更精确的对用户定位。" },
+      { en: "With the mandated rollout of E911 infrastructure, network architects are in a unique position to enhance the security and utility of Wi-Fi networks.", cn: "随着E911基础设施建设命令的出台，为了加强无限保真网的网络安全性和提高它的利用率，网络工程师们正处于一个特殊的位置。" }
+    ]
+  }
+};
+
+let currentMode = 'review';
+let selectedReviewUnit = null;
+let quizUnits = new Set([1,2,3,4,5,6,7]);
+let quizType = 'all';
+let quizQueue = [];
+let quizIndex = 0;
+let quizCorrect = 0;
+let quizWrong = [];
+let answered = false;
+
+function switchMode(mode) {
+  currentMode = mode;
+  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  document.getElementById('reviewSection').classList.toggle('active', mode === 'review');
+  document.getElementById('quizSection').classList.toggle('active', mode === 'quiz');
+}
+
+function initUnitButtons() {
+  const units = Object.keys(DATA);
+  ['unitSelect', 'quizUnitSelect'].forEach(containerId => {
+    const container = document.getElementById(containerId);
+    container.innerHTML = '';
+    const allBtn = document.createElement('button');
+    allBtn.textContent = '全部';
+    allBtn.className = containerId === 'unitSelect' ? 'unit-btn' : 'unit-btn active';
+    if (containerId === 'unitSelect') {
+      allBtn.onclick = () => selectReviewUnit(null);
+    } else {
+      allBtn.onclick = () => toggleAllQuizUnits(allBtn);
+    }
+    container.appendChild(allBtn);
+    units.forEach(u => {
+      const btn = document.createElement('button');
+      btn.textContent = `Unit ${u}`;
+      btn.className = 'unit-btn' + (containerId === 'quizUnitSelect' ? ' active' : '');
+      btn.dataset.unit = u;
+      if (containerId === 'unitSelect') {
+        btn.onclick = () => selectReviewUnit(parseInt(u));
+      } else {
+        btn.onclick = () => toggleQuizUnit(parseInt(u), btn);
+      }
+      container.appendChild(btn);
+    });
+  });
+}
+
+function selectReviewUnit(unit) {
+  selectedReviewUnit = unit;
+  document.querySelectorAll('#unitSelect .unit-btn').forEach(b => b.classList.remove('active'));
+  if (unit === null) {
+    document.querySelector('#unitSelect .unit-btn').classList.add('active');
+  } else {
+    document.querySelector(`#unitSelect .unit-btn[data-unit="${unit}"]`).classList.add('active');
+  }
+  renderReview();
+}
+
+function renderReview() {
+  const content = document.getElementById('reviewContent');
+  const tableA = document.getElementById('reviewTableA');
+  const tableB = document.getElementById('reviewTableB');
+  const tableC = document.getElementById('reviewTableC');
+  const titleA = document.getElementById('reviewTitleA');
+  const titleB = document.getElementById('reviewTitleB');
+  const titleC = document.getElementById('reviewTitleC');
+  content.style.display = 'block';
+
+  let allWords = [];
+  let allSentences = [];
+  if (selectedReviewUnit === null) {
+    titleA.textContent = '全部单元 — A. 英译中';
+    titleB.textContent = '全部单元 — B. 中译英';
+    titleC.textContent = '全部单元 — C. 句子翻译';
+    Object.keys(DATA).forEach(u => {
+      DATA[u].words.forEach(item => allWords.push({ ...item, unit: u }));
+      DATA[u].sentences.forEach(item => allSentences.push({ ...item, unit: u }));
+    });
+  } else {
+    titleA.textContent = DATA[selectedReviewUnit].title + ' — A. 英译中';
+    titleB.textContent = DATA[selectedReviewUnit].title + ' — B. 中译英';
+    titleC.textContent = DATA[selectedReviewUnit].title + ' — C. 句子翻译';
+    DATA[selectedReviewUnit].words.forEach(item => allWords.push({ ...item, unit: selectedReviewUnit }));
+    DATA[selectedReviewUnit].sentences.forEach(item => allSentences.push({ ...item, unit: selectedReviewUnit }));
+  }
+
+  const itemsA = allWords.filter(i => i.type === 'en2cn');
+  const itemsB = allWords.filter(i => i.type === 'cn2en');
+
+  tableA.innerHTML = itemsA.map((item, i) => `
+    <tr>
+      <td>${i + 1}</td>
+      <td>${item.en}</td>
+      <td>${item.cn}</td>
+    </tr>
+  `).join('');
+
+  tableB.innerHTML = itemsB.map((item, i) => `
+    <tr>
+      <td>${i + 1}</td>
+      <td>${item.cn}</td>
+      <td>${item.en}</td>
+    </tr>
+  `).join('');
+
+  tableC.innerHTML = allSentences.map((item, i) => `
+    <tr>
+      <td>${i + 1}</td>
+      <td>${item.en}</td>
+      <td>${item.cn}</td>
+    </tr>
+  `).join('');
+}
+
+function toggleAllQuizUnits(btn) {
+  if (quizUnits.size === 7) {
+    quizUnits.clear();
+    document.querySelectorAll('#quizUnitSelect .unit-btn').forEach(b => b.classList.remove('active'));
+  } else {
+    quizUnits = new Set([1,2,3,4,5,6,7]);
+    document.querySelectorAll('#quizUnitSelect .unit-btn').forEach(b => b.classList.add('active'));
+  }
+}
+
+function toggleQuizUnit(unit, btn) {
+  if (quizUnits.has(unit)) {
+    quizUnits.delete(unit);
+    btn.classList.remove('active');
+  } else {
+    quizUnits.add(unit);
+    btn.classList.add('active');
+  }
+  const allBtn = document.querySelector('#quizUnitSelect .unit-btn');
+  if (quizUnits.size === 7) allBtn.classList.add('active');
+  else allBtn.classList.remove('active');
+}
+
+document.getElementById('quizTypeSelect').addEventListener('click', (e) => {
+  if (e.target.tagName !== 'BUTTON') return;
+  document.querySelectorAll('#quizTypeSelect button').forEach(b => b.classList.remove('active'));
+  e.target.classList.add('active');
+  quizType = e.target.dataset.type;
+});
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function getAllItems() {
+  let items = [];
+  quizUnits.forEach(u => {
+    DATA[u].words.forEach(item => items.push({ ...item, unit: u }));
+    DATA[u].sentences.forEach(item => items.push({ en: item.en, cn: item.cn, type: 'sentence', unit: u }));
+  });
+  return items;
+}
+
+function startQuiz() {
+  if (quizUnits.size === 0) { alert('请至少选择一个单元'); return; }
+  let items = getAllItems();
+  if (quizType !== 'all') {
+    items = items.filter(i => i.type === quizType);
+  }
+  items = shuffle(items);
+  const count = parseInt(document.getElementById('quizCount').value);
+  if (count > 0) items = items.slice(0, count);
+  if (items.length === 0) { alert('该条件下没有题目'); return; }
+
+  quizQueue = items;
+  quizIndex = 0;
+  quizCorrect = 0;
+  quizWrong = [];
+  answered = false;
+
+  document.getElementById('quizSetup').classList.add('hidden');
+  document.getElementById('quizResult').classList.add('hidden');
+  document.getElementById('quizArea').classList.remove('hidden');
+  showQuestion();
+}
+
+function showQuestion() {
+  const q = quizQueue[quizIndex];
+  const total = quizQueue.length;
+  document.getElementById('quizProgressText').textContent = `第 ${quizIndex + 1} / ${total} 题`;
+  document.getElementById('quizScoreText').textContent = `正确: ${quizCorrect}`;
+  document.getElementById('progressFill').style.width = `${((quizIndex) / total) * 100}%`;
+
+  const inputEl = document.getElementById('quizInput');
+  const textareaEl = document.getElementById('quizTextarea');
+  const isSentence = q.type === 'sentence';
+
+  inputEl.classList.toggle('hidden', isSentence);
+  textareaEl.classList.toggle('hidden', !isSentence);
+
+  if (q.type === 'sentence') {
+    document.getElementById('quizQuestion').innerHTML = `<span class="tag" style="background:#dbeafe;color:#2563eb">句子翻译</span><br><br><div style="font-size:.95rem;line-height:1.8;text-align:left;max-width:600px;margin:0 auto">${q.en}</div>`;
+  } else if (q.type === 'en2cn') {
+    document.getElementById('quizQuestion').innerHTML = `<span class="tag tag-en">英译中</span><br><br>${q.en}`;
+  } else {
+    document.getElementById('quizQuestion').innerHTML = `<span class="tag tag-cn">中译英</span><br><br>${q.cn}`;
+  }
+
+  const activeInput = isSentence ? textareaEl : inputEl;
+  activeInput.value = '';
+  activeInput.className = isSentence ? 'quiz-input' : 'quiz-input';
+  activeInput.disabled = false;
+  activeInput.focus();
+  answered = false;
+  document.getElementById('answerReveal').classList.add('hidden');
+  document.getElementById('submitBtn').classList.remove('hidden');
+  document.getElementById('nextBtn').classList.add('hidden');
+}
+
+function normalize(s) {
+  return s.trim().toLowerCase().replace(/[\s\-_,.，。、；;：:！!？?""''()（）\[\]【】{}《》]+/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function submitAnswer() {
+  if (answered) return;
+  answered = true;
+  const q = quizQueue[quizIndex];
+  const isSentence = q.type === 'sentence';
+  const input = isSentence ? document.getElementById('quizTextarea') : document.getElementById('quizInput');
+  const userAnswer = input.value.trim();
+  if (!userAnswer) { answered = false; input.focus(); return; }
+
+  const correctAnswer = q.type === 'cn2en' ? q.en : q.cn;
+  input.disabled = true;
+  const reveal = document.getElementById('answerReveal');
+  reveal.classList.remove('hidden');
+
+  if (q.type === 'sentence') {
+    reveal.className = 'answer-reveal';
+    reveal.style.background = '#f8fafc';
+    reveal.style.border = '2px solid var(--border)';
+    reveal.style.color = '#1e293b';
+    reveal.innerHTML = `
+      <div style="margin-bottom:10px"><strong>你的翻译：</strong><br><div style="margin-top:4px;padding:8px;background:#fff;border-radius:6px;border:1px solid var(--border)">${userAnswer}</div></div>
+      <div style="margin-bottom:12px"><strong>参考答案：</strong><br><div style="margin-top:4px;padding:8px;background:#fff;border-radius:6px;border:1px solid var(--border)">${correctAnswer}</div></div>
+      <div style="display:flex;gap:10px;justify-content:center">
+        <button class="btn btn-success btn-sm" onclick="markSentence(true)">我答对了</button>
+        <button class="btn btn-danger btn-sm" onclick="markSentence(false)">我答错了</button>
+      </div>
+    `;
+    document.getElementById('submitBtn').classList.add('hidden');
+    return;
+  }
+
+  const userNorm = normalize(userAnswer);
+  const correctNorm = normalize(correctAnswer);
+
+  const isCorrect = userNorm === correctNorm
+    || correctNorm.includes(userNorm)
+    || userNorm.includes(correctNorm);
+
+  if (isCorrect) {
+    quizCorrect++;
+    input.className = 'quiz-input correct';
+    reveal.className = 'answer-reveal correct';
+    reveal.innerHTML = `<div class="answer-label">✓ 正确</div>标准答案：${correctAnswer}`;
+  } else {
+    quizWrong.push({ q, userAnswer });
+    input.className = 'quiz-input wrong';
+    reveal.className = 'answer-reveal wrong';
+    reveal.innerHTML = `<div class="answer-label">✗ 错误</div>你的答案：${userAnswer}<br>标准答案：${correctAnswer}`;
+  }
+
+  document.getElementById('quizScoreText').textContent = `正确: ${quizCorrect}`;
+  document.getElementById('submitBtn').classList.add('hidden');
+  document.getElementById('nextBtn').classList.remove('hidden');
+  document.getElementById('nextBtn').focus();
+}
+
+function markSentence(isCorrect) {
+  const q = quizQueue[quizIndex];
+  const input = document.getElementById('quizTextarea');
+  const userAnswer = input.value.trim();
+  const correctAnswer = q.cn;
+  const reveal = document.getElementById('answerReveal');
+
+  reveal.style.background = '';
+  reveal.style.border = '';
+  reveal.style.color = '';
+
+  if (isCorrect) {
+    quizCorrect++;
+    input.className = 'quiz-input correct';
+    reveal.className = 'answer-reveal correct';
+    reveal.innerHTML = `<div class="answer-label">✓ 正确</div>参考答案：${correctAnswer}`;
+  } else {
+    quizWrong.push({ q, userAnswer });
+    input.className = 'quiz-input wrong';
+    reveal.className = 'answer-reveal wrong';
+    reveal.innerHTML = `<div class="answer-label">✗ 错误</div>标准答案：${correctAnswer}`;
+  }
+
+  document.getElementById('quizScoreText').textContent = `正确: ${quizCorrect}`;
+  document.getElementById('nextBtn').classList.remove('hidden');
+  document.getElementById('nextBtn').focus();
+}
+
+function nextQuestion() {
+  quizIndex++;
+  if (quizIndex >= quizQueue.length) {
+    showResult();
+  } else {
+    showQuestion();
+  }
+}
+
+function showResult() {
+  document.getElementById('quizArea').classList.add('hidden');
+  document.getElementById('quizResult').classList.remove('hidden');
+  const total = quizQueue.length;
+  const pct = Math.round((quizCorrect / total) * 100);
+  document.getElementById('resultScore').textContent = `${pct}%`;
+  document.getElementById('resultDetail').textContent = `${total} 题中答对 ${quizCorrect} 题`;
+
+  const wrongDiv = document.getElementById('wrongList');
+  if (quizWrong.length === 0) {
+    wrongDiv.innerHTML = '<p style="text-align:center;color:var(--success);font-weight:600">全部正确，太棒了！</p>';
+  } else {
+    wrongDiv.innerHTML = '<h3 style="margin-bottom:12px;color:var(--danger)">错题回顾</h3>' +
+      quizWrong.map(({ q, userAnswer }) => {
+        const question = q.type === 'cn2en' ? q.cn : (q.en.length > 60 ? q.en.substring(0, 60) + '...' : q.en);
+        const answer = q.type === 'cn2en' ? q.en : q.cn;
+        const typeLabel = q.type === 'sentence' ? '句子翻译' : (q.type === 'en2cn' ? '英译中' : '中译英');
+        return `<div style="padding:10px;margin-bottom:8px;background:var(--danger-bg);border-radius:8px;border-left:4px solid var(--danger)">
+          <div style="font-size:.8rem;color:var(--gray);margin-bottom:4px">${typeLabel}</div>
+          <div><strong>题目：</strong>${question}</div>
+          <div><strong>你的答案：</strong>${userAnswer}</div>
+          <div><strong>正确答案：</strong>${answer}</div>
+        </div>`;
+      }).join('');
+  }
+  document.getElementById('progressFill').style.width = '100%';
+}
+
+function restartQuiz() {
+  startQuiz();
+}
+
+function backToSetup() {
+  document.getElementById('quizResult').classList.add('hidden');
+  document.getElementById('quizSetup').classList.remove('hidden');
+}
+
+document.getElementById('quizInput').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    if (!answered) submitAnswer();
+    else nextQuestion();
+  }
+});
+
+document.getElementById('quizTextarea').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    if (!answered) submitAnswer();
+    else nextQuestion();
+  }
+});
+
+initUnitButtons();
+selectReviewUnit(null);
+</script>
+</body>
+</html>

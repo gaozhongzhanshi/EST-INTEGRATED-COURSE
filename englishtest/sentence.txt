@@ -1,0 +1,77 @@
+科技英语综合教程课后答案及课文翻译
+Unit 1
+
+III. Sentence Translation:
+A. Translate the following English sentencesinto Chinese: (Pay attention to the underlined part)
+
+1. The essence of a game is the interdependence of player strategies. There are two  distinct types of strategic interdependence: sequential and simultaneous.  博弈的实质是博弈者采取策略之间的相互依赖性。这种策略性的相互依赖表现为两个不同的类别：连续策略之间的相互作用以及联立策略之间的相互作用。
+2. When we say that an outcome is an equilibrium, there is no presumption that each person's privately best choice will lead to a collectively optimal result. 当我们把博弈的结果表述为一种均衡的时候，并不是基于以下的假设：即博弈的每个参与者的个人最佳策略将会带来共同的最优化结果。
+3. In some situations of conflict, any systematic action will be discovered and exploited by the rival. Therefore, it is important to keep the rival guessing by mixing one's moves. Typical examples arise in sports-whether to run or to passs in a particular situation in football, or whether to hit a passing shot cross-court or down the line in tennis. 在一些博弈的冲突中，任何条理化和计划性的行为都会被对手发现并加以利用。因此，通过采用组合性策略使对手迷惑就显的非常重要。我们在体育运动中可以发现典型的例子---比如足球比赛时特定情况下选择跑位或传球，网球比赛击球时选择斜线球或底线球。
+4. Brinkmanship "is the tactic of deliberately letting the situation get somewhat out of hand, just because its being out of hand may be intolerable to the other party and force his accommodation."边缘政策 “是一种故意使局势变的有些无法控制的策略，正是这种无法控制性可能会使另一方无法接受而选择妥协。”
+5. When one player knows something that others do not, sometimes he is anxious to conceal this information (one's hand in poker), and at other times he wants to reveal it credibly (a company's commitment to quality). In both cases the general principle is that actions speak louder than words.当博弈的一方了解其他人所不掌握的信息时，他会急于隐瞒这一信息(比如牌局中所拿到的牌)，在其他一些情况下，他还会想令人信服的公开某些信息(比如某一公司对质量的承诺)。在这两种情况下，行胜于言是博弈者遵循的基本原则。
+
+
+Unit 2
+
+III. Sentence Translation
+A. Translate the following English sentencesinto Chinese: (Pay attention to the underlined part)
+1.    The devices can be designed to specifically target and enter tumor cells. Once inside, they can deliver ant number of payloads, from agents that improve cancer detection to treatments such as drugs or genes. 这种纳米装置可以设计用来靶向并进入肿瘤细胞。一旦进入，它们就可以携带提高癌症检测的制剂及癌症治疗的药物或基因等许多有效载荷。
+2.    Adjusting the particles' sizes creates probes that, when stimulated by light, emit distinct amounts of energy, or different colors of light. 调整颗粒的大小就形成了探针，当光束照射探针时，它就会放射出大量清晰可见的能量，或者是不同颜色的光。
+3.    The researchers then injected the targeted drug-dendrimer complexes intravenously into mice riddled with human epitheliai-cell cancer. 研究人员接着将靶向药物树枝状聚合物通过静脉注射到移植了人类上皮细胞的小鼠身上。
+4.    Because flesh is transparent to light in this wavelength range, targeting nanotubes to cancer cells and then hitting them with a near-infrared laser could turn the tubes into weapons that kill the cells with heat.  由于肌肉在这个波长内具有透光性，将纳米管靶向癌细胞并用近红外线激光照射，就能将纳米管变成用高温杀死癌细胞的武器。
+5.    Normally, if a healthy cell acquires too many mutations to develop properly, the p53 gene will initiate cellular suicide. If this gene stops working, however, the cell keeps growing and can become malignant. 正常情况下，如果一个健康的细胞发生了许多突变而不能继续正常生长，p53基因就会诱发细胞自杀。然而，假如这个基因停止作用，细胞就会持续生长，最终可能变为恶性肿瘤细胞。
+
+
+
+Unit 3
+III. Sentence Translation
+A. Translate the following English sentencesinto Chinese: (Pay attention to the underlined part)
+
+1.    The extreme flexibility and capacity for growth characteristic of ES cells makes them ideal for producing large quantities of therapeutic cells to treat, say, diabetes or spinal cord injuries. 胚胎干细胞的极强的适应性以及生长能力使它们能够产生大量的治疗细胞去治疗像糖尿病及脊髓损伤一类的疾病。
+2.    These cells can form oligodendrocytes, the cells that, among other functions, produce the protective myelin sheath that allows neurons to send signals along their axons. 该细胞可形成少突神经胶质细胞，其功能之一是产生保护性髓磷脂鞘使神经元能够沿着神经轴突传递信号。
+3.    Perhaps the biggest worry is that hES therapies will spur tumor formation. One of the defining characteristics of ES cells is that they form disorganized tumors, called teratomas, when injected in undifferentiated form under the skin of immune-compromised mice. 也许对人体胚胎干细胞疗法的最大担心在于它可能诱发肿瘤形成。已明确的是在免疫受损小鼠皮下注射未分化的胚胎细胞时可形成非组织性肿瘤，即畸胎瘤。
+4.    Cultured cells are often kept alive with fetal calf serum, for instance, and most hES cell lines have been grown on layers of mouse cells called feeder cells, which provide the key proteins that prevent ES cells from differentiating. 比如，培养的细胞通常在胎牛血清中存活，大多数人体胚胎干细胞生长在滋养层细胞的鼠细胞层上，以提供关键蛋白质防止胚胎细胞分化。
+5.    Finally, some scientists worry that ES cells might acquire harmful new mutations in culture, and such mutations would be particularly hard to detect ahead of time.最后，一些研究者担心在培养中胚胎细胞可能会获得有害的新突变。这种突变事先是难以检测到的。
+
+Unit 4
+III. SentenceTranslation:
+A. Translate the following English sentencesinto Chinese.
+
+1.       By using the PCMM (PacketCable Multimedia) specification, cable operator can enhance a user’s broadband experience by prioritizing or reserving bandwidth for latency-sensitive or feature-rich applications. 通过使用PCMM规范， 有线运营商可以对时延敏感或富有特色的应用给予优先权或预留带宽，从而加深用户对于宽带业务的感受。
+2.       The PCMM architecture consists of six main elements: IP endpoints (PC, gaming consoles or SIP phones), cable modem, CMTS (cable modem termination system), record keeping server, policy server and an application manager. ＰＣＭＭ体系结构包括六个主要组成部分：ＩＰ端点（ＰＣ机、游戏控制器或ＳＩＰ话机）、电缆调制解调器、电缆调制解调器终端系统（ＣＭＴＳ）、记录保持服务器、策略服务器和应用管理器。
+3.       The seamless cellular Wi-Fi roaming technology would alert the mobile carrier when a user migrates into a Wi-Fi zone so the signal could be transferred from the cell tower to the Wi-Fi access point, where it would enable the unit’s broadband capabilities while the voice conversation continued. 当用户从蜂窝网移至ＷｉＦｉ服务区时，无缝蜂窝漫游系统将告知移动运营商，使信号从蜂窝天线塔转移至ＷｉＦｉ接入点，启动手机的宽带功能，同时保持话音通信。
+4.       The newest technology to enter the wireless networking fray is the concept of meshed networks, which moves away from the “hot spot” concept toward the “metro spot” utopia. 进入无线网络竞争的新技术是网状网，它要把“热点”的概念变为理想的“城点”概念。
+5.       Leveraging the ubiquity of standard Ethernet and IP technologies, an active Ethernet network installs the associated network electronics at the subscriber network edge instead of the CO or head-end. 有源以太网利用了以太网和ＩＰ这两种标准技术无所不在的特点，把相关网络设备安装在用户网络边缘，而不是在中心局或局端。
+
+
+Unit 5
+
+III. SentenceTranslation
+A. Translatethe following English sentences into Chinese.
+1.      As our phones get smarter, smaller and faster and enable users to connect at high speeds to the Internet, an obvious question arises: Is the mobile handset turning into the next computer? 电话变得越来越智能、小型、快速，并且能够让用户高速地连接到因特网，一个显而易见的问题就出现了：移动手持设备将成为下一代的计算机吗？
+2.      There are also smartphones on the way with video cameras, GPS antennas and access to local Wi-Fi hotspots, the superfast wireless networks often found in offices, airports and cafes. 还有一些正在开发中的智能电话,他们将带有摄像机、GPS天线以及本地Wi-Fi (一种常在办公室、机场和本地咖啡馆能找到的超高速无限网络)热点链接的入口。
+3.      With this capability, phones will soon be able to provide precise driving directions, serve up discounts for stores as you walk by them and expand dating services. 有了这项功能，手机很快就能提供诸如精确的行车向导、走过店铺时店铺的打折信息以及开展约会等服务。
+4.      Cell phones aren’t likely to take the fastest road to this bright future. Innovation in the mobile industry is full of zigzags and wrong turns, often because no single company completely controls the device in your pocket.  手机不太可能沿着最快的道路飞驶向自己光明的未来。这个行业里的创新充满了曲折和失误，这常常是由于没有任何一家单独的公司能完全控制这一产品。
+5.      Yet mobile-phone innovators are working to solve that tricky problem, too. Scientists are continuing decades of research into speech-recognition systems and have recently introduced the technology into PDAs. 然而，手机创新者也正着手解决这个棘手的问题。科学家已经在语音识别系统方面进行了数十年的研究，而且此项研究仍在继续。最近已将这项技术引入了PDAs中。
+
+
+Unit 6
+
+III. Sentence Translation
+A. Translate the following Englishsentences into Chinese:
+1.      Businesses may not put much stock in recycling, but when it comes to computing power, researchers’ work in creating the first high-quality reversible computing power supply may be the key to unlocking the power of tomorrow’s computing platforms. 业界可能对回收能量方面没有太大信心，但是谈到计算能力，一位研究人员从事“现实环保”的研究可能是开发未来计算平台能力的关键。
+2.      Reversible computers, or adiabatic systems, recycle their energy to give off extremely little heat, enabling computing power to continue growing where existing technology would falter.  可逆计算机即绝热系统，它能够将能量回收，因此只产生很少的热量，使计算能力在现有计算技术无能为力的情况下继续提升。
+3.      To stave off these problems, researchers have been investigating alternative computing techniques. Quantum computing, has garnered significant publicity. 为了避免这些问题，研究人员一直在研究可替代的计算方法。其中，量子计算已经引起了广泛的关注。
+4.      Much of the energy needed to make that change is given off in the form of a spark in the case of static energy, or heat in the case of circuitry.  发生这一转变所需的能量在静电这种情况下表现为瞬间放电，在电路这种情况下表现为释放热量。
+5.      The universal chip is estimated to be several thousand times more energy-efficient than comparable irreversible circuits. However, the chips were proof-of-concept designs and haven’t yet been optimized. It wouldn’t be more efficient for practical applications. 这种通用芯片能量效率预计比类似的不可逆电路要高几千倍。然而这些芯片的设计目前还停留在概念阶段，尚未被优化。因而在实际应用中不会更高效。
+
+Unit 7
+
+III. Sentence Translation
+A. Translate the following Englishsentences into Chinese:
+
+1.      As with the public network, understanding an individual or device’s physical location will enable a new range of applications that will radically improve existing business processes and information technologies. 对于公共网而言，了解个人和设备的物理位置会带来一系列新的应用。这些应用将从根本上改进商业流程和信息技术。
+2.      By contrast, E911 determines caller location through agents that receive Automatic Number Identification (ANI) messages containing the calling phone number as determined by the phone company’s switching equipment. The agents use these ANI messages to look up the caller’s location in a database via a process called Automatic Location Identification (ALI). 比较而言，E911系统却可以通过接收了自动数字识别信息的代理来决定主叫方的位置。代理利用了包含由电话公司的交换设备确定的主叫号码的自动数字识别信息，通过一个叫做自动定位识别的过程在数据库中寻找主叫方的位置信息。
+3.      He points out that the access infrastructure provider, the entity that owns the actual DSL, cable, or Wi-Fi service, can always determine the location of devices on its network. 他指出接入基础设施提供商，即拥有数字用户线路、电缆和无限保真网服务的实体总能确定设备在网络上的位置。
+4.      By comparing the signal strength received from multiple APs, triangulation can more precisely locate a user. 通过比较多个接入点接收到的信号强度，三角测量技术能更精确的对用户定位。
+5.      With the mandated rollout of E911 infrastructure, network architects are in a unique position to enhance the security and utility of Wi-Fi networks. Using location-aware presence, Newbury Networks CTO Mathew Gray thinks he can improve Wi-Fi security in a number of ways. 随着E911基础设施建设命令的出台,为了加强无限保真网的网络安全性和提高它的利用率, 网络工程师们正处于一个特殊的位置。纽伯瑞网络公司的技术总监马修·格雷认为, 采用现在的定位技术就能从很多方面加强无限保真网的网络安全性。
